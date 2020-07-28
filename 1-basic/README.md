@@ -30,7 +30,7 @@ CPU的硬件原理（80x86为例）
 
 ## 专业英语（Computing Essentials 2017）
 
-> 几十万美元的年薪才是重点（Careers in IT）
+> 几十千美元的年薪才是重点（Careers in IT）
 
 - 信息科技
 
