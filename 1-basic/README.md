@@ -98,20 +98,46 @@ CPU的硬件原理（80x86为例）
 
 软件生命周期（规范、设计、打代码、测试、文档、运维），编程语言（机器、汇编-可移植语言、高等-编译器解释器、面向任务-查询语句&程序生成器、问题和约束-自然语言）
 
+## 编译原理
 
+- 文法
 
+S -> a | b | (T)
 
+T -> TdS | S
 
+语法树，
 
+![图片](./tree.png)
 
+https://blog.csdn.net/sundingh/article/details/78714245
 
+https://www.jianshu.com/p/9045f4b9c532
 
+NFA DFA, DFA属于NFA，NFA状态机输入确定输出多种通路，DFA只有一条输出，所以DFA性能更好。
 
+DFA把NFA（1 2 3 4 5 6 7 8 9……）划分为状态组（A B C D E）组间转换是通过输入。
+![NFA](./NFA.PNG) ![DFA](./DFA.PNG)
 
+AC组内通过ab互相转化，合并为一组
+![SDFA](./SDFA.PNG)
 
+逆波兰表达式（没有括号，运算量写在前面,把算符写在后面，多个运算量和算符中心对称连接）
 
+*(21)* if a>0 *(a 0 >)* then *(33 BZ)* x=x+1 *(x x 1 + =)* else *(40 BR)* x=4*(x-1) *(x 4 x 1 - *)* *(40)*
 
+四元式(opreation symbol,arg1,arg2,result)
 
+a:=b*c+b*d 
 
+（*，b,c,t1) (*,b,d,t2) (+,t1,t2,t3) (:=,t3,-,a) 
 
+LL(1)文法 LR分析法
 
+0123型文法，自上向下分析，自下而上分析。
+
+https://blog.csdn.net/zuzhiang/article/details/79047743
+
+https://blog.csdn.net/hxfghgh/article/details/80150011
+
+这玩意太难不学了ψ(｀∇´)ψ
